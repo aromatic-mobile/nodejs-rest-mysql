@@ -10,4 +10,7 @@ Edit `connection.js` to change database parameters with yours.
 
 This project has been tested with the node version 4.2.x. 
 
-Travis : [![Build Status](https://travis-ci.org/viasisco/nodejs-rest-mysql.svg?branch=master)](https://travis-ci.org/viasisco/nodejs-rest-mysql)
+## Build Status
+
+|Travis : | 4.x | 5.x | 6.x| 7.x |[![Build Status](https://travis-ci.org/viasisco/nodejs-rest-mysql.svg?branch=master)](https://travis-ci.org/viasisco/nodejs-rest-mysql)|
+|---|---|---|---|---|---|
