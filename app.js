@@ -27,6 +27,16 @@ app.use(bodyParser.json({limit: '50mb'})); //can get long request...
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//Define CORS to allow cross origin access
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header('Access-Control-Allow-Credentials', true);
+    next();
+});
+
 app.use('/', routes);
 app.use('/users', users);
 app.use('/items', itemRouter);
